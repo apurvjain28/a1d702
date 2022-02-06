@@ -6,11 +6,6 @@ import moment from "moment";
 const Messages = (props) => {
   const { messages, otherUser, userId } = props;
 
-  // sorting the messages according to timeStamp
-  // const sortedMessages = messages.sort(
-  //   (a, b) => new Date(a.createdAt) - new Date(b.createdAt)
-  // );
-
   return (
     <Box>
       {messages.map((message) => {

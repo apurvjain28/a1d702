@@ -24,15 +24,6 @@ const Sidebar = (props) => {
   const conversations = props.conversations || [];
   const { handleChange, searchTerm } = props;
 
-  // // Sorting the conversation when new message appears
-  // if (conversations) {
-  //   conversations.sort(
-  //     (a, b) =>
-  //       new Date(b.messages[b.messages.length - 1].createdAt) -
-  //       new Date(a.messages[a.messages.length - 1].createdAt)
-  //   );
-  // }
-
   return (
     <Box className={classes.root}>
       <CurrentUser />

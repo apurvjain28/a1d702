@@ -1,14 +1,14 @@
 export const tagLastMessage = (messages, otherUserId) => {
   //find and set old last message sent by user to false
   for (let i = messages.length - 1; i >= 0; i--) {
-    if (messages[i].senderId !== otherUserId && messages[i].isLast === true) {
+    if (messages[i].senderId !== otherUserId && messages[i].isLast) {
       messages[i].isLast = false;
       break;
     }
   }
   //find and set new last message sent by user
   for (let i = messages.length - 1; i >= 0; i--) {
-    if (messages[i].senderId !== otherUserId && messages[i].isSeen === true) {
+    if (messages[i].senderId !== otherUserId && messages[i].isSeen) {
       let newMessage = { ...messages[i] };
       newMessage.isLast = true;
       messages[i] = newMessage;

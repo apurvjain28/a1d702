@@ -18,10 +18,10 @@ const Messages = (props) => {
     if (
       messages.length > 0 &&
       messages[messages.length - 1].senderId !== userId &&
-      messages[messages.length - 1].isSeen === false
+      !messages[messages.length - 1].isSeen
     ) {
       for (let i = messages.length - 1; i >= 0; i--) {
-        if (messages[i].senderId !== userId && messages[i].isSeen === false) {
+        if (messages[i].senderId !== userId && !messages[i].isSeen) {
           putMessage(messages[i]);
         } else break;
       }

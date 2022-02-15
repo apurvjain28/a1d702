@@ -106,6 +106,8 @@ export const addUpdatedMessageToStore = (state, payload) => {
           break;
         }
       }
+
+      // if (convoCopy.otherUser.id !== )
       tagLastMessage(convoCopy.messages, convoCopy.otherUser.id);
       return convoCopy;
     } else {
